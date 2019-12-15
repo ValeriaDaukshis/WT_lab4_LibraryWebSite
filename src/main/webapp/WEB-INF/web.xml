@@ -7,7 +7,7 @@
 
   <servlet>
     <servlet-name>StartPage</servlet-name>
-    <servlet-class>com.servlet.StartPage</servlet-class>
+    <servlet-class>com.servlet.common.StartPage</servlet-class>
   </servlet>
 
   <servlet-mapping>
