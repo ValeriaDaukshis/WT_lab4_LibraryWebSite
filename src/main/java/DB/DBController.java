@@ -1,6 +1,7 @@
 package DB;
 
 import Beans.Book;
+import Beans.Librarian;
 import Beans.User;
 import org.apache.log4j.Logger;
 
@@ -40,6 +41,42 @@ public class DBController {
         } catch (SQLException ex) {
             log.warn("Error in database inserting: " + ex);
         }
+    }
+
+    public boolean CompareUser(User user){
+        try {
+            ResultSet rs = this.statement.executeQuery("SELECT name, password FROM users");
+            while (rs.next()) {
+                String name= rs.getString("name");
+                String password= rs.getString("password");
+                if(name.equals(user.getName()) && password.equals(user.getPassword())){
+                    return true;
+                }
+            }
+        } catch (SQLException ex) {
+            log.warn("Error in database inserting: " + ex);
+        } catch (Exception ex) {
+            log.warn("Error in database inserting: " + ex);
+        }
+        return false;
+    }
+
+    public boolean CompareLibrarian(Librarian lib){
+        try {
+            ResultSet rs = this.statement.executeQuery("SELECT name, password FROM librarians");
+            while (rs.next()) {
+                String name= rs.getString("name");
+                String password= rs.getString("password");
+                if(name.equals(lib.getName()) && password.equals(lib.getPassword())){
+                    return true;
+                }
+            }
+        } catch (SQLException ex) {
+            log.warn("Error in database inserting: " + ex);
+        } catch (Exception ex) {
+            log.warn("Error in database inserting: " + ex);
+        }
+        return false;
     }
 
     public void DeleteBook(int id){

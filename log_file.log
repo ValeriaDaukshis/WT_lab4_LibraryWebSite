@@ -1,0 +1,9 @@
+2019-12-15 15:20:06 ERROR DataBaseDao:26 - Connection with db failed: java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver
+2019-12-15 15:20:14 ERROR DataBaseDao:26 - Connection with db failed: java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver
+2019-12-15 15:24:24 ERROR DataBaseDao:26 - Connection with db failed: java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver
+2019-12-15 15:24:31 ERROR DataBaseDao:26 - Connection with db failed: java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver
+2019-12-15 15:27:42 ERROR DataBaseDao:26 - Connection with db failed: java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver
+2019-12-15 15:30:21 ERROR DataBaseDao:26 - Connection with db failed: java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver
+2019-12-15 15:43:38 ERROR DataBaseDao:26 - Connection with db failed: java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver
+2019-12-15 15:43:40 ERROR DataBaseDao:26 - Connection with db failed: java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver
+2019-12-15 15:43:51 ERROR DataBaseDao:26 - Connection with db failed: java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver

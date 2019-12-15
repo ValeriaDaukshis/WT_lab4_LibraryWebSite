@@ -20,7 +20,7 @@ public class DataBaseDao {
         ReadProperties();
 
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             db = DriverManager.getConnection(url, username, password);
         }catch (ClassNotFoundException ex){
             log.error("Connection with db failed: " + ex);
