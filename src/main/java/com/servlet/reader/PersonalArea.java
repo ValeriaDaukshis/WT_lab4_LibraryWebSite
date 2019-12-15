@@ -10,6 +10,6 @@ import java.io.IOException;
 @WebServlet("/personalArea")
 public class PersonalArea extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        getServletContext().getRequestDispatcher("/personalArea.jsp").forward(request, response);
     }
 }

@@ -45,7 +45,7 @@ public class DBController {
 
     public boolean CompareUser(User user){
         try {
-            ResultSet rs = this.statement.executeQuery("SELECT name, password FROM users");
+            ResultSet rs = this.statement.executeQuery("SELECT name, password FROM users;");
             while (rs.next()) {
                 String name= rs.getString("name");
                 String password= rs.getString("password");
@@ -63,7 +63,7 @@ public class DBController {
 
     public boolean CompareLibrarian(Librarian lib){
         try {
-            ResultSet rs = this.statement.executeQuery("SELECT name, password FROM librarians");
+            ResultSet rs = this.statement.executeQuery("SELECT name, password FROM librarians;");
             while (rs.next()) {
                 String name= rs.getString("name");
                 String password= rs.getString("password");
@@ -79,13 +79,41 @@ public class DBController {
         return false;
     }
 
-    public void DeleteBook(int id){
+    public void DeleteBook(String name){
         try {
-            String str = "DELETE FROM books WHERE id=" + id + ";";
+            String str = "DELETE FROM books WHERE name=" + name + ";";
             this.statement.execute(str);
         } catch (SQLException ex) {
             log.warn("Error in database inserting: " + ex);
         }
+    }
+
+    public void UpdateBook(int count, String name, String author){
+        try {
+            String str = "UPDATE books SET count=" + count + " WHERE name= '"+ name +"' and author = '"+ author+"';";
+            this.statement.execute(str);
+        } catch (SQLException ex) {
+            log.warn("Error in database inserting: " + ex);
+        }
+    }
+
+    public Book GetBook(String bookName){
+        try {
+            ResultSet rs = this.statement.executeQuery("SELECT * FROM books WHERE name='" + bookName + "');");
+            while (rs.next()) {
+                String name= rs.getString("name");
+                String author= rs.getString("author");
+                String description= rs.getString("description");
+                int count= Integer.parseInt(rs.getString("count"));
+                int pages= rs.getInt("pages");
+                return new Book(name, author, count, description, pages);
+            }
+        } catch (SQLException ex) {
+            log.warn("Error in database inserting: " + ex);
+        } catch (Exception ex) {
+            log.warn("Error in database inserting: " + ex);
+        }
+        return null;
     }
 
     public void DeleteBookFromUser(String username, String bookName){
@@ -133,7 +161,6 @@ public class DBController {
             while (rs.next()) {
                 String name= rs.getString("name");
                 byte age= rs.getByte("age");
-                byte gender= rs.getByte("gender");
                 list.add(new User(name, age));
             }
         } catch (SQLException ex) {

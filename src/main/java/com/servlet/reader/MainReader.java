@@ -2,13 +2,14 @@ package com.servlet.reader;
 
 import Beans.Book;
 import DB.DBController;
+import DB.DataBaseDao;
 
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -25,17 +26,32 @@ public class MainReader extends HttpServlet {
         String book = request.getParameter("book");
         String remove = request.getParameter("remove");
         DBController controller = new DBController();
+        HttpSession session = request.getSession();
 
         if(book != null){
-            //controller.AddBookToUser();
-            getServletContext().getRequestDispatcher("/successAddBook.jsp").forward(request, response);
+            controller.AddBookToUser(session.getAttribute("name").toString(), book);
+            Book b = controller.GetBook(book);
+            if(b.getCount() > 0){
+                controller.UpdateBook(b.getCount()-1, b.getName(), b.getAuthor());
+                DataBaseDao.close();
+                getServletContext().getRequestDispatcher("/successAddBook.jsp").forward(request, response);
+            }
+            else{
+                DataBaseDao.close();
+                getServletContext().getRequestDispatcher("/notSuccessAddBook.jsp").forward(request, response);
+            }
+
         }
         else if(remove != null){
-            //controller.DeleteBookFromUser();
+            controller.DeleteBookFromUser(session.getAttribute("name").toString(), remove);
+            Book b = controller.GetBook(book);
+            controller.UpdateBook(b.getCount()+1, b.getName(), b.getAuthor());
+            DataBaseDao.close();
             getServletContext().getRequestDispatcher("/successRemoveBook.jsp").forward(request, response);
         }
         else {
             List<Book> list = controller.ReadBooksFromDB();
+            DataBaseDao.close();
             request.setAttribute("list", list);
             getServletContext().getRequestDispatcher("/mainReader.jsp").forward(request, response);
         }

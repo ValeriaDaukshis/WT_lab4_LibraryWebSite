@@ -2,6 +2,7 @@ package com.servlet.reader;
 
 import Beans.User;
 import DB.DBController;
+import DB.DataBaseDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
@@ -35,6 +36,7 @@ public class Registration extends HttpServlet {
             else{
                 controller.InsertUser(new User(userName, age, userPassword));
             }
+            DataBaseDao.close();
             getServletContext().getRequestDispatcher("/registration.jsp").forward(request, response);
         }
     }

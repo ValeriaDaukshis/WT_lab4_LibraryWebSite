@@ -35,7 +35,7 @@ public class DataBaseDao {
         return db;
     }
 
-    public void close() {
+    public static void close() {
         try {
             db.close();
         } catch (SQLException e) {

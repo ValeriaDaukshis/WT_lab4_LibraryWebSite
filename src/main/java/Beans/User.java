@@ -31,4 +31,29 @@ public class User {
     public byte getAge() {
         return age;
     }
+
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        User listDao = (User) obj;
+
+        if (age != listDao.age)
+            return false;
+
+        if (name == null && password == null)
+            return (name == listDao.name) && (password == listDao.password);
+
+        else if (!password.equals(listDao.password) || !name.equals(listDao.name))
+            return false;
+        return true;
+    }
+
+    public int hashCode() {
+        return (int) (password.hashCode() + name.hashCode() + 23 * age + 58);
+    }
+
 }

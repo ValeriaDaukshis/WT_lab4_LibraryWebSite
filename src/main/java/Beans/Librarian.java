@@ -4,17 +4,15 @@ public class Librarian {
 
     private String name;
     private byte age;
-    private byte gender;
     private String password;
 
-    public Librarian(String name, byte gender, byte age, String password) {
-        this(name, gender, age);
+    public Librarian(String name, byte age, String password) {
+        this(name, age);
         this.password = password;
     }
 
-    public Librarian(String name, byte gender, byte age) {
+    public Librarian(String name, byte age) {
         this.name = name;
-        this.gender = gender;
         this.age = age;
     }
 
@@ -35,7 +33,28 @@ public class Librarian {
         return age;
     }
 
-    public byte getGender() {
-        return gender;
+
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Librarian listDao = (Librarian) obj;
+
+        if (age != listDao.age)
+            return false;
+
+        if (name == null && password == null)
+            return (name == listDao.name) && (password == listDao.password);
+
+        else if (!password.equals(listDao.password) || !name.equals(listDao.name))
+            return false;
+        return true;
+    }
+
+    public int hashCode() {
+        return (int) (password.hashCode() + name.hashCode() + 23 * age + 58);
     }
 }

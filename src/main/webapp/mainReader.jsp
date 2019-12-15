@@ -19,7 +19,7 @@
              <br>
              <p>${book.getPages()}</p>
              <form action="mainReader" method="POST">
-             	<br><br><input type="submit" value= "${book}" name="book" />
+             	<br><br><input type="submit" value= ${book.getName()} name="book" />
              </form>
              <hr>
         </c:forEach>

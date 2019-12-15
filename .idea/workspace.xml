@@ -2,23 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7149266f-3686-4d2f-bf08-671f62a59d97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/successAddBook.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/successRemoveBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_181.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlet/librarian/BooksExtensions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/insertBook.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/notSuccessAddBook.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log_file.log" beforeDir="false" afterPath="$PROJECT_DIR$/log_file.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Beans/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Beans/Librarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/Librarian.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Beans/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DB/DBController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/DBController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DB/DataBaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/DataBaseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/librarian/MainLibrarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/librarian/MainLibrarian.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/reader/MainReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/reader/MainReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/reader/PersonalArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/reader/PersonalArea.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/reader/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/reader/Registration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/mainLibrarian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mainLibrarian.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/mainReader.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mainReader.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/personalArea.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/personalArea.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/successAddBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/successAddBook.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/successRemoveBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/successRemoveBook.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/common/StartPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="18" column="53" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="53" />
+            <state relative-caret-position="441">
+              <caret line="30" column="99" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="99" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/reader/MainReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+            <state relative-caret-position="764">
+              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/reader/Registration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="21" column="63" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="21" selection-end-column="63" />
+            <state relative-caret-position="525">
+              <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,47 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/reader/PersonalArea.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="51" selection-end-line="20" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/mainReader.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/personalArea.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DB/DBController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-395">
-              <caret line="91" column="13" lean-forward="true" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
+            <state relative-caret-position="252">
+              <caret line="12" column="63" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,21 +83,65 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Beans/Book.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-59">
-              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state relative-caret-position="1071">
+              <caret line="71" column="25" lean-forward="true" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DB/DBController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="447">
+              <caret line="108" column="71" selection-start-line="108" selection-start-column="71" selection-end-line="108" selection-end-column="71" />
               <folding>
-                <element signature="e#1026#1027#0" expanded="true" />
-                <element signature="e#1054#1055#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/successRemoveBook.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/librarian/MainLibrarian.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+            <state relative-caret-position="709">
+              <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/librarian/BooksExtensions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DB/DataBaseDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Beans/Librarian.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -157,33 +164,37 @@
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/servlet/common/UserInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/servlet/common/DataBaseDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/librarian/MainLibrarian.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/reader/PersonalArea.java" />
         <option value="$PROJECT_DIR$/src/main/resources/database.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/Beans/Librarian.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/test.bat" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/Beans/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DB/DataBaseDao.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/registration.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/servlet/reader/Registration.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/mainReader.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/successAddBook.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/personalArea.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/successRemoveBook.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/servlet/common/StartPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Beans/Book.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/mainReader.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/personalArea.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/mainLibrarian.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/DB/DBController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/servlet/librarian/BooksExtensions.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/registration.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/servlet/reader/PersonalArea.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/successAddBook.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/successRemoveBook.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/notSuccessAddBook.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/insertBook.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/Beans/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Beans/Librarian.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Beans/Book.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DB/DataBaseDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/servlet/librarian/MainLibrarian.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/servlet/reader/MainReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/servlet/reader/Registration.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="880" />
-    <option name="height" value="1050" />
+    <option name="x" value="950" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -191,7 +202,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -284,20 +294,13 @@
             </path>
             <path>
               <item name="WT_lab4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WT_lab4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WT_lab4" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -306,7 +309,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WT_lab3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WT_lab2" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.345977" />
@@ -369,7 +372,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21946308" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22281879" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -401,13 +404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Beans/Librarian.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.bat">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -436,23 +432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Beans/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/DataBaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/WT/mysql-connector-java-8.0.18/mysql-connector-java-8.0.18.jar!/META-INF/README">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -463,8 +442,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainLibrarian.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/registration.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -473,55 +456,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/librarian/MainLibrarian.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/personalArea.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="231">
+          <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/successAddBook.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
-          <caret line="7" column="24" selection-end-line="9" selection-end-column="7" />
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/successRemoveBook.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        <state relative-caret-position="147">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/common/StartPage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/notSuccessAddBook.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="18" column="53" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="53" />
+        <state relative-caret-position="210">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainReader.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainLibrarian.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="69" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/insertBook.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Beans/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="56" column="5" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Beans/Librarian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Beans/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="71" column="25" lean-forward="true" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/librarian/BooksExtensions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Beans/Book.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/common/StartPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-59">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="441">
+          <caret line="30" column="99" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="99" />
           <folding>
-            <element signature="e#1026#1027#0" expanded="true" />
-            <element signature="e#1054#1055#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DB/DataBaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DB/DBController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-395">
-          <caret line="91" column="13" lean-forward="true" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
+        <state relative-caret-position="447">
+          <caret line="108" column="71" selection-start-line="108" selection-start-column="71" selection-end-line="108" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/librarian/MainLibrarian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="709">
+          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -530,8 +578,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/reader/MainReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+        <state relative-caret-position="764">
+          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -540,8 +588,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/reader/PersonalArea.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="252">
+          <caret line="12" column="63" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -550,32 +598,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/reader/Registration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="63" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="21" selection-end-column="63" />
+        <state relative-caret-position="525">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="51" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainReader.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/personalArea.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
         </state>
       </provider>
     </entry>

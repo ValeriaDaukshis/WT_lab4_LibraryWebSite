@@ -58,4 +58,29 @@ public class Book {
     public Book() {
 
     }
+
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Book listDao = (Book) obj;
+
+        if (pages != listDao.pages || pages != listDao.pages || count != listDao.count)
+            return false;
+
+        if (name == null && author == null && description != null)
+            return (name == listDao.name) && (author == listDao.author) && (description == listDao.description);
+
+        else if (!author.equals(listDao.author) || !name.equals(listDao.name) || !description.equals(listDao.description))
+            return false;
+        return true;
+    }
+
+    public int hashCode() {
+        return (int) (author.hashCode() + name.hashCode() + 23 * count + 58 * pages);
+    }
+
 }

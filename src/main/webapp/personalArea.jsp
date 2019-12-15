@@ -12,7 +12,7 @@
                  <h2>${book.getName()}</h2>
                  <h4>${book.getAuthor()}</h4>
                  <form action="mainReader" method="POST">
-                     <br><br><input type="submit" value= "${book}" name="remove" />
+                     <br><br><input type="submit" value= ${book.getName()} name="remove" />
                  </form>
                  <hr>
              </c:forEach>
