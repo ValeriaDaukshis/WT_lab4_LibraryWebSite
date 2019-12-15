@@ -27,7 +27,7 @@ public class DBController {
 
     public void InsertUser(User user){
         try {
-            String str = "INSERT INTO users(name,gender,age,password) VALUES ('" + user.getName() + "'," + user.getGender() + ", "+user.getAge()+", '"+user.getPassword()+"'); ";
+            String str = "INSERT INTO users(name,gender,age,password) VALUES ('" + user.getName() + "', "+user.getAge()+", '"+user.getPassword()+"'); ";
             this.statement.execute(str);
         } catch (SQLException ex) {
             log.warn("Error in database inserting: " + ex);
@@ -36,7 +36,7 @@ public class DBController {
 
     public void InsertBook(Book b){
         try {
-            String str = "INSERT INTO books(name,author,image,description,pages) VALUES ('" + b.getName() + "','" + b.getAuthor()+ "','" + b.getImage()+ "','"+b.getDescription()+"'," + b.getPages() + "); ";
+            String str = "INSERT INTO books(name,author,image,description,pages) VALUES ('" + b.getName() + "','" + b.getAuthor()+ "'," + b.getCount()+ ",'"+b.getDescription()+"'," + b.getPages() + "); ";
             this.statement.execute(str);
         } catch (SQLException ex) {
             log.warn("Error in database inserting: " + ex);
@@ -88,6 +88,24 @@ public class DBController {
         }
     }
 
+    public void DeleteBookFromUser(String username, String bookName){
+        try {
+            String str = "DELETE FROM usersBooks WHERE userName='" + username + "' and bookName='"+bookName+"';";
+            this.statement.execute(str);
+        } catch (SQLException ex) {
+            log.warn("Error in database inserting: " + ex);
+        }
+    }
+
+    public void AddBookToUser(String username, String bookName){
+        try {
+            String str = "INSERT INTO usersBooks(username, bookName) VALUES ('" + username + "','" + bookName+ "'); ";
+            this.statement.execute(str);
+        } catch (SQLException ex) {
+            log.warn("Error in database inserting: " + ex);
+        }
+    }
+
     public ArrayList<Book> ReadBooksFromDB(){
         ArrayList<Book> list = new ArrayList<Book>();
         try {
@@ -96,9 +114,9 @@ public class DBController {
                 String name= rs.getString("name");
                 String author= rs.getString("author");
                 String description= rs.getString("description");
-                String image= rs.getString("image");
+                int count= Integer.parseInt(rs.getString("count"));
                 int pages= rs.getInt("pages");
-                list.add(new Book(name, author, image, description, pages));
+                list.add(new Book(name, author, count, description, pages));
             }
         } catch (SQLException ex) {
             log.warn("Error in database inserting: " + ex);
@@ -116,7 +134,7 @@ public class DBController {
                 String name= rs.getString("name");
                 byte age= rs.getByte("age");
                 byte gender= rs.getByte("gender");
-                list.add(new User(name, gender, age));
+                list.add(new User(name, age));
             }
         } catch (SQLException ex) {
             log.warn("Error in database inserting: " + ex);

@@ -1,26 +1,26 @@
 package Beans;
 
 public class Book {
-    private String image;
+    private int count;
     private String name;
     private String author;
     private String description;
     private int pages;
 
-    public Book(String name, String author, String image, String description, int pages) {
+    public Book(String name, String author, int count, String description, int pages) {
         this.name = name;
         this.author = author;
         this.pages = pages;
-        this.image = image;
+        this.count = count;
         this.description = description;
     }
 
-    public String getImage() {
-        return image;
+    public int getCount() {
+        return count;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setCount(int count) {
+        this.count = count;
     }
 
     public String getName() {

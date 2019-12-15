@@ -20,12 +20,16 @@ public class DataBaseDao {
         ReadProperties();
 
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
             db = DriverManager.getConnection(url, username, password);
         }catch (ClassNotFoundException ex){
             log.error("Connection with db failed: " + ex);
         }
         catch (SQLException ex) {
+            log.error("Connection with db failed: " + ex);
+        } catch (IllegalAccessException ex) {
+            log.error("Connection with db failed: " + ex);
+        } catch (InstantiationException ex) {
             log.error("Connection with db failed: " + ex);
         }
         return db;

@@ -3,11 +3,10 @@ package Beans;
 public class User {
     private String name;
     private byte age;
-    private byte gender;
     private String password;
 
-    public User(String name, byte gender, byte age, String password) {
-        this(name, gender, age);
+    public User(String name, byte age, String password) {
+        this(name, age);
         this.password = password;
     }
 
@@ -16,9 +15,8 @@ public class User {
         this.password = password;
     }
 
-    public User(String name, byte gender, byte age) {
+    public User(String name, byte age) {
         this.name = name;
-        this.gender = gender;
         this.age = age;
     }
 
@@ -32,9 +30,5 @@ public class User {
 
     public byte getAge() {
         return age;
-    }
-
-    public byte getGender() {
-        return gender;
     }
 }
